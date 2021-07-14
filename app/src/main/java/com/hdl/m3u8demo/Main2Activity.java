@@ -1,7 +1,6 @@
 package com.hdl.m3u8demo;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -22,6 +21,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.appcompat.app.AppCompatActivity;
 import hdl.com.lib.runtimepermissions.HPermissions;
 import hdl.com.lib.runtimepermissions.PermissionsResultAction;
 
@@ -94,7 +94,8 @@ public class Main2Activity extends AppCompatActivity {
     public void onDownload(View view) {
         String url = etUrl.getText().toString().trim();
 //        url = etUrl.getText().toString();
-        task1.setSaveFilePath("/sdcard/111/" + System.currentTimeMillis() + ".ts");
+        task1.setTempDir(getExternalFilesDir("m3u8")+File.separator+"m3u8temp");
+        task1.setSaveFilePath(getExternalFilesDir("m3u8") +File.separator + System.currentTimeMillis() + ".ts");
         tvSaveFilePathTip.setText("文件保存在：/sdcard/111/" + System.currentTimeMillis() + ".ts");
         task1.download(url, new OnDownloadListener() {
             @Override

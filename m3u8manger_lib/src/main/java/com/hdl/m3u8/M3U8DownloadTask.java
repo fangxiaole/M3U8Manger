@@ -338,6 +338,10 @@ public class M3U8DownloadTask {
         this.saveFilePath = saveFilePath;
     }
 
+    public void setTempDir(String tempDir){
+        this.tempDir = tempDir;
+    }
+
     /**
      * 通知异常
      *

@@ -1,7 +1,6 @@
 package com.hdl.m3u8demo;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -10,6 +9,7 @@ import com.hdl.m3u8.M3U8Manger;
 import com.hdl.m3u8.bean.M3U8;
 import com.hdl.m3u8.bean.M3U8Listener;
 
+import androidx.appcompat.app.AppCompatActivity;
 import hdl.com.lib.runtimepermissions.HPermissions;
 import hdl.com.lib.runtimepermissions.PermissionsResultAction;
 
